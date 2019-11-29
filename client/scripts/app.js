@@ -20,6 +20,9 @@ var App = {
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
+      for (var i = 0; i < data.length; i++) {
+        $("#chats").append(`<div>${data[i].username} said ${data[i].text}</div>`)
+      }
       console.log(data);
 
       callback();

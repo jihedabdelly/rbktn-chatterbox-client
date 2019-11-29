@@ -5,7 +5,11 @@ var MessagesView = {
   initialize: function() {
   },
 
-  render: function() {
+  renderMessage: function(message) {
+  	MessagesView.$chats.append(`<div class="username">
+        <div id=${window.username}></div>
+        <div>${message}</div>
+      </div>`)
   }
 
 };
