@@ -7,6 +7,7 @@ var RoomsView = {
     RoomsView.$button.on('click', RoomsView.handleClick);
   },
 
+<<<<<<< HEAD
   render: function() {
     RoomsView.$select.html('');
     Rooms.items().each(RoomsView.renderRoom);
@@ -24,6 +25,13 @@ var RoomsView = {
     Rooms.selected = RoomsView.$select.val();
     MessagesView.render();
   },
+=======
+  renderRoom: function(name) {
+
+   RoomsView.$select.append(`<div>${name}</div>`)
+
+  }
+>>>>>>> 3d1a8301ec22a1c4634ea5e80fdd204b70de9dab
 
   handleClick: function(event) {
     var roomname = prompt('Enter room name');
